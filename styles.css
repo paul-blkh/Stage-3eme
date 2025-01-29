@@ -1,6 +1,7 @@
 body {
-
-	font-family: Arial, sans-serif;
+	font-family: "Audiowide", serif;
+	font-weight: 400;
+	font-style: normal;
 
 	background-color: #f0f8ff;
 
@@ -347,7 +348,6 @@ background-image: linear-gradient(75deg,white,  lightgray 5%,white 15%, lightgra
 background-size: 100%;
 background-attachment: fixed;
 min-height: 300px;
-font-family: arial,sans-serif;
 font-size: 16px;
 overflow: auto;
 overflow-x: hidden;
@@ -401,8 +401,8 @@ animation-timing-function: linear;
 }
 
 @keyframes translateShadow {
-0% {transform: translateY(0) ;box-shadow: 0px 0px  10px #444466}
-100% {transform: translateY(var(--bounce-height));box-shadow:40px 350px  250px #444466}
+0% {transform: translateX(-150%) translateY(0) ;box-shadow: 0px 0px  10px #444466}
+100% {transform: translateX(-150%) translateY(var(--bounce-height));box-shadow:40px 350px  250px #444466}
 }
 @keyframes smash{
 0% {transform: scaleY(.7)}
