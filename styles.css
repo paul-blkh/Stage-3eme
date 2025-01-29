@@ -1,0 +1,413 @@
+body {
+
+	font-family: Arial, sans-serif;
+
+	background-color: #f0f8ff;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+header {
+
+	background-color: black;
+
+	color: burlywood;
+
+	padding: 10px 0;
+
+	text-align: center;
+
+}
+
+nav {
+
+	background-color: black;
+
+	padding: 10px;
+
+}
+
+nav a {
+
+	color: white;
+
+	margin: 0 10px;
+
+	text-decoration: none;
+
+}
+
+.day-entry {
+
+	margin: 20px;
+
+	padding: 20px;
+
+	border: 1px solid #ccc;
+
+	border-radius: 10px;
+
+	background-color: #fff;
+
+}
+
+.day-entry h2 {
+
+	color: burlywood;
+
+}
+
+.day-entry img {
+
+	max-width: 100%;
+
+	height: auto;
+
+	border-radius: 10px;
+
+}
+
+td {
+
+	color : white;
+
+}
+
+.texte-rouge {
+
+	color : goldenrod;
+
+}
+
+.ball {
+	position: relative;
+	bottom: 50px;
+	left: calc(100% - 20px);
+	width: 50px;
+	height: 50px;
+	background: black;
+	border-radius: 50%;
+	animation: ball-move8234 3s ease-in-out 1s infinite alternate;
+  }
+  
+  .ball::after {
+	position: absolute;
+	content: '';
+	top: 25px;
+	right: 5px;
+	width: 5px;
+	height: 5px;
+	background: white;
+	border-radius: 50%;
+  }
+  
+  .bar {
+	margin-left: 250px;;
+	width: 200px;
+	height: 12.5px;
+	background: #FFDAAF;
+	border-radius: 30px;
+	transform: rotate(-15deg);
+	animation: up-down6123 3s ease-in-out 1s infinite alternate;
+  }
+  
+  @keyframes up-down6123 {
+	from {
+	  transform: rotate(-15deg);
+	}
+  
+	to {
+	  transform: rotate(15deg);
+	}
+  }
+  
+  @keyframes ball-move8234 {
+	from {
+	  left: calc(100% - 40px);
+	  transform: rotate(360deg);
+	}
+  
+	to {
+	  left: calc(0% - 20px);
+	  transform: rotate(0deg);
+	}
+  }
+  /* From Uiverse.io by SelfMadeSystem */ 
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 0.3rem;
+	--stroke: #666;
+	--fill: #ffc73a;
+  }
+  
+  .rating input {
+	appearance: unset;
+  }
+  
+  .rating label {
+	cursor: pointer;
+  }
+  
+  .rating svg {
+	width: 2rem;
+	height: 2rem;
+	overflow: visible;
+	fill: transparent;
+	stroke: var(--stroke);
+	stroke-linejoin: bevel;
+	stroke-dasharray: 12;
+	animation: idle 4s linear infinite;
+	transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+	from {
+	  stroke-dashoffset: 24;
+	}
+  }
+  
+  .rating label:hover svg {
+	stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+	transition: 0s;
+	animation: idle 4s linear infinite, yippee 0.75s backwards;
+	fill: var(--fill);
+	stroke: var(--fill);
+	stroke-opacity: 0;
+	stroke-dasharray: 0;
+	stroke-linejoin: miter;
+	stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+	0% {
+	  transform: scale(1);
+	  fill: var(--fill);
+	  fill-opacity: 0;
+	  stroke-opacity: 1;
+	  stroke: var(--stroke);
+	  stroke-dasharray: 10;
+	  stroke-width: 1px;
+	  stroke-linejoin: bevel;
+	}
+  
+	30% {
+	  transform: scale(0);
+	  fill: var(--fill);
+	  fill-opacity: 0;
+	  stroke-opacity: 1;
+	  stroke: var(--stroke);
+	  stroke-dasharray: 10;
+	  stroke-width: 1px;
+	  stroke-linejoin: bevel;
+	}
+  
+	30.1% {
+	  stroke: var(--fill);
+	  stroke-dasharray: 0;
+	  stroke-linejoin: miter;
+	  stroke-width: 8px;
+	}
+  
+	60% {
+	  transform: scale(1.2);
+	  fill: var(--fill);
+	}
+  }
+  /* From Uiverse.io by Z4drus */ 
+.button-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+  }
+  
+  .button-3d {
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	border-width: 0;
+	padding: 0 8px;
+	min-width: 4em;
+	min-height: 4em;
+	box-sizing: border-box;
+	background: transparent;
+	font: inherit;
+	cursor: pointer;
+	margin: 10px;
+	border-radius: 20px;
+  }
+  
+  .button-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	padding: 8px 16px;
+	transform: translateY(0);
+	color: #fff;
+	background-image: linear-gradient(145deg, #6a11cb, #2575fc);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	transition: transform 0.3s, border-radius 0.3s, background 10s;
+  }
+  
+  .button-3d:active .button-top {
+	border-radius: 10px 10px 8px 8px / 8px;
+	transform: translateY(2px);
+	background-image: linear-gradient(145deg, #2575fc, #6a11cb);
+  }
+  
+  .button-bottom {
+	position: absolute;
+	z-index: 1;
+	bottom: 4px;
+	left: 4px;
+	border-radius: 20px;
+	padding-top: 6px;
+	width: calc(100% - 8px);
+	height: calc(100% - 10px);
+	background-image: linear-gradient(145deg, #2575fc, #6a11cb);
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+	transition: border-radius 0.2s, padding-top 0.2s;
+  }
+  
+  .button-base {
+	position: absolute;
+	z-index: 0;
+	top: 4px;
+	left: 0;
+	border-radius: 20px;
+	width: 100%;
+	height: calc(100% - 4px);
+	background-color: rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.75),
+	  inset 0 2px 2px rgba(0, 0, 0, 0.25);
+	transition: border-radius 0.2s, padding-top 0.2s;
+  }
+  
+  .button-3d:active .button-bottom {
+	border-radius: 10px 10px 8px 8px / 8px;
+	padding-top: 0;
+  }
+  
+  .button-3d:active .button-base {
+	border-radius: 10px 10px 8px 8px / 8px;
+  }
+  /* From Uiverse.io by Creatlydev */ 
+.button {
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+  transition: transform 0.3s;
+
+  background: linear-gradient(
+    90deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
+}
+
+.button__icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.button:hover {
+  border-color: #f4f5f2;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}
+:root{
+--animation-duration:1s;
+--bounce-height:calc(205px - 50vh);
+}
+body{
+background-image: linear-gradient(75deg,white,  lightgray 5%,white 15%, lightgray 55% , lightgray 90%,white);
+background-size: 100%;
+background-attachment: fixed;
+min-height: 300px;
+font-family: arial,sans-serif;
+font-size: 16px;
+overflow: auto;
+overflow-x: hidden;
+margin:0;
+}
+h1{
+line-height: 24px;
+margin: 0;
+font-weight: normal;
+}
+#suport{
+position: absolute;
+width: 100%;
+text-align:start;
+}
+#smash{
+animation-name: smash;
+animation-duration: var(--animation-duration);
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+transform-origin: bottom;
+}
+#translateShadow,#rotateImg,#light{
+border-radius: 50%;
+display:inline-block;
+width: 50px;
+height: 50px;
+}
+#light{
+background-image:  radial-gradient(circle at 20% 20%, rgba(255, 221, 179,.7),rgba(255, 221, 179,.5) 10%, transparent 30% ,rgba(83,42,0,.8) 85%);
+position:absolute;
+z-index: 1;
+}
+#translateShadow{
+animation-name: translateShadow;
+animation-duration: var(--animation-duration);
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+}
+
+#rotateImg{
+background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='75 75 251 251' fill='rgb(83,42,0)'><path d='M313.3,145.3c-14.4-29.3-38.8-50.5-67.1-61.6c-4.6-1.7-16.2-5.1-21.3-6.3	c-26.3-5.3-54.5-2.3-80.4,10.4c-30.2,14.8-52.9,40.6-63.8,72.5c-10.9,31.8-8.7,66,6.2,96.1l0.1,0.2c2.1,4.2,4.4,8.3,6.9,12.2l0,0	c0,0,0,0,0,0c23.6,36.9,64.4,58,106.5,58c18.7,0,37.6-4.1,55.4-12.9c30.2-14.8,52.9-40.6,63.8-72.5 	C330.3,209.6,328.1,175.5,313.3,145.3z M238.3,86.2c25.2,12.5,41.2,36.6,46,68.5c-24.3,0.8-45.4-15.7-67.4-33.1 	c-18.4-14.5-37.3-29.3-58.9-34.2C184.6,77.6,212.8,77.7,238.3,86.2z M85.4,161.9c10.4-30.6,32.2-55.3,61.2-69.6 	c0.9-0.4,1.7-0.8,2.6-1.2c23.6,2.3,44.4,18.6,64.6,34.5c21.4,16.9,43.4,34.1,68.8,34.1c0.8,0,1.5,0,2.3-0.1c1,9.5,1.1,19.7,0.2,30.4 	c-9.8-3.3-19.3-5.9-25.7-7.6c-37.6-9.8-79.7-16.1-112.5-16.7c-24-0.5-53,1.8-66,14.2C81.8,173.9,83.4,167.8,85.4,161.9z M91.4,254.4 	l-0.1-0.2c-10.1-20.5-14.1-42.8-11.9-65l0.5,0.2c5.3-12.9,29-19.5,66.7-18.8c32.5,0.7,74.1,6.8,111.4,16.6 	c10.1,2.6,18.9,5.3,26.5,7.8c-1.2,10.2-3.3,20.4-6.3,30.3c-19.8-8.8-48.7,2.6-81.8,15.7c-32,12.6-68.1,26.8-99.7,23 	C94.9,261,93.1,257.7,91.4,254.4z M187.8,321.2c-34.6-3.6-67-21.9-87.5-51.7c31.8,2.4,66.9-11.4,98-23.7 	c32.4-12.8,60.6-23.9,78.4-15.5c-5.6,17.2-13.6,33.4-23.5,47c-12.8,17.7-34.5,39.5-65.6,43.3L187.8,321.2z M253.5,309.4 	c-15.6,7.7-32.1,11.6-48.4,12.3c36.2-12.4,62.8-49,76.1-88.8c9.1,6.7,14.2,20.1,15.8,40.6C285.7,288.6,270.9,300.9,253.5,309.4z 	 M314.8,239.8c-3.3,9.8-7.8,19-13.3,27.4c-2.4-19.7-8.5-32.6-18.7-39.3c3.1-10.3,5.4-20.8,6.6-31.1c19.2,6.9,29.2,13.2,30.7,17.3 	l0.4-0.2C319.6,222.6,317.7,231.3,314.8,239.8z M290,191.7c1.1-11.3,1-22.1-0.2-32.4c6.8-0.9,13.8-3,21.1-6.8l-2.3-4.5 	c-6.8,3.4-13.2,5.4-19.5,6.3c-1.6-11.1-4.6-21.4-8.8-30.7c-4.6-10.3-10.8-19.2-18.3-26.6c19.5,11.6,36,28.7,46.8,50.5 	c9.3,18.9,13.4,39.4,12.3,59.8C314.9,201.6,302.6,196.1,290,191.7z'/></svg>");
+background-color: darkorange; 
+background-size: 100%;
+animation-name: rotateImg;
+animation-duration: calc(var(--animation-duration) * 5.3);
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+@keyframes translateShadow {
+0% {transform: translateY(0) ;box-shadow: 0px 0px  10px #444466}
+100% {transform: translateY(var(--bounce-height));box-shadow:40px 350px  250px #444466}
+}
+@keyframes smash{
+0% {transform: scaleY(.7)}
+15%  {transform: scaleY(1)}
+}
+@keyframes rotateImg {
+100% {transform:rotate(360deg)}
+}

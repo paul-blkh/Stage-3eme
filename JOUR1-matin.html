@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jour 1 - Matin - Carnet de Bord</title>
+
+	<link rel="stylesheet" href="styles.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>	
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Le carnet de bord de mon stage d'observation.</h1>
+
+		<img src="LOGO ACCSI UNIS.png" style="width:20%; height:20%; float:right; margin-right:10px;"/>
+
+    </header>
+
+    <nav>
+
+        <a href="CARNET-DE-BORD.html">Accueil</a>
+
+		<table style="display:inline;"><thead></thead><tbody>
+
+		<tr><td class="texte-rouge" colspan=2 style="text-align:center;">Lundi 27 janvier</td></tr>
+
+		<tr>
+
+			<td><a class="texte-rouge" href="JOUR1-matin.html">matin</a></td>
+
+			<td><a href="JOUR1-apres-midi.html">après-midi</a></td>
+
+		</tr>
+
+		</tbody></table>
+
+		<table style="display:inline;"><thead></thead><tbody>
+
+		<tr><td colspan=2 style="text-align:center;">Mardi 28 janvier</td></tr>
+
+		<tr>
+
+			<td><a href="JOUR2-matin.html">matin</a></td>
+
+			<td><a href="JOUR2-apres-midi.html">après-midi</a></td>
+
+		</tr>
+
+		</tbody></table>
+
+		<table style="display:inline;"><thead></thead><tbody>
+
+		<tr><td colspan=2 style="text-align:center;">Mercredi 29 janvier</td></tr>
+
+		<tr>
+
+			<td><a href="JOUR3-matin.html">matin</a></td>
+
+			<td><a href="JOUR3-apres-midi.html">après-midi</a></td>
+
+		</tr>
+
+		</tbody></table>
+
+    </nav>
+
+    <div class="day-entry" id="mon_carnet">
+
+        <h2>Jour 1 - Matin</h2>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/SAP-Logo.svg/2560px-SAP-Logo.svg.png" alt="Image du jour 1" style="width:20%; height:20%;">
+
+        <textarea rows="5" style="width:90%;"></textarea>
+		
+
+    </div>
+<!-- From Uiverse.io by Z4drus --> 
+<div class="button-container">
+	<a class="texte-rouge" href="CARNET-DE-BORD.html">
+	<button class="button-3d">
+		
+	  <div class="button-top">
+		<span class="material-icons">❮</span>
+	  </div>
+	  <div class="button-bottom"></div>
+	  <div class="button-base"></div>
+	</button>
+</a>
+<a href="JOUR1-apres-midi.html">	
+	
+	<button class="button-3d">
+	  <div class="button-top">
+		<span class="material-icons">❯</span>
+	  </div>
+	  <div class="button-bottom"></div>
+	  <div class="button-base"></div>
+	</button>
+	</a>
+  </div>
+	<div>
+
+		
+<!-- From Uiverse.io by Creatlydev --> 
+<button class="button" onclick="generatePDF()" style="right:10px; bottom: 10px; position:fixed;">
+	<svg
+	  stroke-linejoin="round"
+	  stroke-linecap="round"
+	  fill="none"
+	  stroke="currentColor"
+	  stroke-width="1.5"
+	  viewBox="0 0 24 24"
+	  height="40"
+	  width="40"
+	  class="button__icon"
+	  xmlns="http://www.w3.org/2000/svg"
+	>
+	  <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+	  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+	  <path d="M7 11l5 5l5 -5"></path>
+	  <path d="M12 4l0 12"></path>
+	</svg>
+	<span class="button__text">Download</span>
+  </button>
+		<script>
+
+			function generatePDF() {
+
+			  const element = document.getElementById('mon_carnet');
+
+			  html2pdf().from(element).save();
+
+			}
+
+		</script>
+
+    </div>
+
+</body>
+
+</html>
